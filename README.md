@@ -14,7 +14,7 @@ The codes are based on python3.7+, CUDA version 11.0+. The specific configuratio
    
    ```shell
    conda env create -f smfdm.yaml
-   conda activate idm
+   conda activate smfdm
    ```
 ## Data preparation
 Firstly, download the datasets used.
