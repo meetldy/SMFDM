@@ -115,11 +115,6 @@ def main(args):
             # diffusion.set_mask(mask)
             lr_scheduler = optim.lr_scheduler.StepLR(optimizer1, args.decay_frequency, gamma=0.1)
         max_psnr = -1e18
-        if args.flops:
-            sample_data = {'inp': torch.randn(1, 3, 16, 16),'gt': torch.randn(1, 3, 128, 128)}
-            diffusion.feed_data(sample_data)
-            diffusion.calculate_flops()
-            exit()
         while current_step < n_iter:
             current_epoch += 1
             scaler = torch.cuda.amp.GradScaler()
@@ -284,7 +279,6 @@ def main(args):
         for _,  val_data in enumerate(val_loader):
             idx += 1
             diffusion.feed_data(val_data)
-            # diffusion.calculate_flops()
             diffusion.test(crop=False, continous=True, use_ddim=opt['use_ddim'])
             visuals = diffusion.get_current_visuals()
 
@@ -353,7 +347,7 @@ if __name__ == "__main__":
 
     parser.add_argument('--death_rate_decay', type=float, default=0.99, help='Decay rate for the death rate.')
     parser.add_argument('--sparse', action='store_true', help='Enable sparse mode.')
-    parser.add_argument('--flops', action='store_true', help='Calculate the flops.')
+   
     parser.add_argument('-c', '--config', type=str, default='config/ffhq_liifsr3_scaler_16_128.json',
                         help='JSON file for configuration')
     parser.add_argument('-p', '--phase', type=str, choices=['train', 'val'],
