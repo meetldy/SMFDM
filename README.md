@@ -31,7 +31,7 @@ Then, resize to get LR_IMGS and HR_IMGS.
 python data/prepare_data.py  --path [dataset root]  --out [output root] --size 16,128 
 ```
 ## Pre-trained checkpoints
-The pre-trained checkpoints can be found at the following: [link](https://drive.google.com/drive/folders/1VISy9fVWa9iOSr6F4oVtKVTOViWuKohQ?usp=drive_link).
+The pre-trained checkpoints can be found at the following: [link](https://zenodo.org/records/14979013).
 
 ## Training and Validation
 Run the following command for the training and validation:
