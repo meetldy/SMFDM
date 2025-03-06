@@ -17,8 +17,8 @@ The codes are based on python3.7+, CUDA version 11.0+. The specific configuratio
    conda activate smfdm
    ```
 ## Data preparation
-Firstly, download the datasets used.
-- [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [CelebaHQ](https://www.kaggle.com/badasstechie/celebahq-resized-256x256)
+Firstly, download the prepared training datasets and test datasets used.
+- [FFHQ and CelebaHQ](10.5281/zenodo.14957655)
 
 Then, resize to get LR_IMGS and HR_IMGS.
 ```
