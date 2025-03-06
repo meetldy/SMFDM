@@ -1,7 +1,6 @@
 <TOC>
 
 # Accelerating Super-Resolution via Sparse Momentum and Encoder State Reuse 
-
 This repository is an offical implementation of the paper "Accelerating Super-Resolution via Sparse Momentum and Encoder State Reuse".
 
 This repository is still under development.
@@ -15,7 +14,6 @@ Image super-resolution aims to reconstruct high-quality images from low-resoluti
 </div>
 
 ## Environment configuration
-
 The codes are based on python3.7+, CUDA version 11.0+. The specific configuration steps are as follows:
 
 1. Create conda environment
@@ -33,8 +31,8 @@ Then, resize to get LR_IMGS and HR_IMGS.
 python data/prepare_data.py  --path [dataset root]  --out [output root] --size 16,128 
 ```
 ## Pre-trained checkpoints
-
 The pre-trained checkpoints can be found at the following: [link](https://drive.google.com/drive/folders/1VISy9fVWa9iOSr6F4oVtKVTOViWuKohQ?usp=drive_link).
+
 ## Training and Validation
 Run the following command for the training and validation:
 
@@ -44,3 +42,13 @@ Run the following command for the training and validation:
 ## Acknowledgements
 This code is mainly built on [IDM](https://github.com/Ree1s/IDM), [sparse_learning](https://github.com/TimDettmers/sparse_learning), and [Faster-Diffusion
 ](https://github.com/hutaiHang/Faster-Diffusion).
+
+## Citation
+```
+@article{caosmfdm2025,
+    author = {Kerang Cao and Na Bao and Shuai Zheng and Lini Duan and Ye Liu and Xing Wang},
+    title = {Accelerating Super-Resolution via Sparse Momentum and Encoder State Reuse},
+    journal = {The Visual Computer},
+    year = {2025},
+    note = {Submitted to {The Visual Computer}}  
+}
