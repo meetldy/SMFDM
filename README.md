@@ -35,4 +35,4 @@ Run the following command for the training and validation:
    ```
 ## Acknowledgements
 This code is mainly built on [IDM](https://github.com/Ree1s/IDM), [sparse_learning](https://github.com/TimDettmers/sparse_learning), and [Faster-Diffusion
-]([https://github.com/yinboc/liif](https://github.com/hutaiHang/Faster-Diffusion)).
+](https://github.com/hutaiHang/Faster-Diffusion).
